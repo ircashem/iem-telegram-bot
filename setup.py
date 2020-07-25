@@ -17,7 +17,7 @@ contact_body =extract_contact(CONTACT_URL)
 print("Extracting news_body")
 news_body = extract_news(NEWS_URL)
 
-TOKEN = '1295365378:AAG6VuRAL0xxc_2i8edRh46p2ILhOwyCOT0'
+TOKEN = '1295365378:*******************************'
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
