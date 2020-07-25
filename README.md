@@ -45,7 +45,7 @@
 ## About The Project
 
 [IEM_Bot](https://telegram.me/iemcrpbot):
-The bot is built with `python3` with the help of `python-telegram-api` and `bs4`. The bot fetches data from the offcial website of [Institute of Engineering & Management, Kolkata](https://www.iem.edu.in) and scrape the relevant data from the website using  `web scrapping`.
+The bot is built with `python3` with the help of `python-telegram-api` and `bs4`. The bot fetches data from the official website of [Institute of Engineering & Management, Kolkata](https://www.iem.edu.in) and scrape the relevant data from the website using  `web scrapping`.
 <br><br>
 
 
