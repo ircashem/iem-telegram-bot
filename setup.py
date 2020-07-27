@@ -1,23 +1,28 @@
-import logging, requests, re
+import logging, requests, re, os
 from filters.notice_header import extract_notice_header
 from filters.notice_body import extract_notice_body
 from filters.contact_body import extract_contact
 from filters.news_body import extract_news
+from dotenv import load_dotenv
+
+
+config = ".env" if os.path.exists(".env") else "sample.env"
+load_dotenv(dotenv_path=config)
+token = os.getenv("TOKEN")
 
 NOTICE_URL = 'https://www.iem.edu.in/notices'
 CONTACT_URL = 'https://www.iem.edu.in/contact-us'
 NEWS_URL = 'https://www.iem.edu.in/tag/news-articles'
 
-print("Extracting notice_header")
+print("Extracting notice_header",end="\r")
 notice_header = extract_notice_header(NOTICE_URL)
-print("Extracting notice_body")
+print("Extracting notice_body",end="\r")
 notice_body = extract_notice_body(NOTICE_URL)
-print("Extracting contact_body")
+print("Extracting contact_body",end="\r")
 contact_body =extract_contact(CONTACT_URL)
-print("Extracting news_body")
+print("Extracting news_body",end="\r")
 news_body = extract_news(NEWS_URL)
 
-TOKEN = '1295365378:*******************************'
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 

@@ -1,6 +1,7 @@
 
 from msg import wrong_option
 from telegram.ext import CommandHandler, MessageHandler, ConversationHandler, Filters
+from api.quote import random_quote
 
 web_url = "https://www.iem.edu.in"
 
@@ -12,7 +13,8 @@ def start(update, context):
     msg = "Hi, " + "<b>" + user.first_name + "</b>."
     context.bot.send_message(chat_id=chat_id, text=msg, parse_mode='HTML')
     msg = "<strong> Welcome to the iemcrp group. </strong> \n"
-    msg += "Quote of the day: \n<i>This is just start of a new adventure Rick. Wanna be a part of it.</i>\n"
+    msg += "Quote of the day: \n"
+    msg += "<i> " + random_quote() + "</i>\n"
     msg += web_url
     # print(logger.info(msg))
     msg += "\n/notice"

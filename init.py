@@ -5,17 +5,15 @@ from handlers.notice import notice_handler
 from handlers.news import news_handler
 from handlers.good_bye import exit_handler
 from handlers.contact import contact_handler
-from setup import TOKEN,error
+from setup import error,token
+
+avail_handlers = [start_handler, notice_handler, news_handler, contact_handler, exit_handler]
 
 def main():
-    updater = Updater(token=TOKEN, use_context=True)
+    updater = Updater(token=token, use_context=True)
     dp = updater.dispatcher
-    dp.add_handler(start_handler)
-    dp.add_handler(notice_handler)
-    dp.add_handler(news_handler)
-    dp.add_handler(contact_handler)
-    dp.add_handler(exit_handler)
-    dp.add_error_handler(error)
+    for handler in avail_handlers:
+        dp.add_handler(handler)
 
     print("Handler started successfully.")
     updater.start_polling()
