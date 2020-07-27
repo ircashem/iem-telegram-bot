@@ -7,12 +7,12 @@
     <img src="https://iem.edu.in/app/themes/iem-group-wp-theme/resources/logo.png" alt="Logo" width="190">
   </a>
 
-  <h3 align="center"><a href="https://telegram.me/iemcrpbot">IEM_Bot</a></h3>
+  <h3 align="center"><a href="https://telegram.me/IEMCRP_bot">IEM_Bot</a></h3>
 
   <p align="center">
     .
     <br>
-    Click <a href="https://telegram.me/iemcrpbot">here</a> to add it to Telegram.
+    Click <a href="https://telegram.me/IEMCRP_bot">here</a> to add it to Telegram.
     <br />
     <a href="https://github.com/ircashem/iem-telegram-bot"><strong>Explore the docs »</strong></a>
     <br />
@@ -42,7 +42,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[IEM_Bot](https://telegram.me/iemcrpbot):
+[IEM_Bot](https://telegram.me/IEMCRP_bot):
 The bot is built with `python3` with the help of `python-telegram-api` and `bs4`. The bot fetches data from the official website of [Institute of Engineering & Management, Kolkata](https://www.iem.edu.in) and scrape the relevant data from the website using  `web scrapping`.
 <br><br>
 
